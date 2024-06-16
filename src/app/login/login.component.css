@@ -1,0 +1,28 @@
+body{
+    background-color: #071c4a;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7%;
+}
+form{
+    height: 200px;
+    width: 400px;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 35px;
+    
+}
+h2{
+    padding: 5%;
+    font-family: 'Rubik 80s Fade';
+    color: #071c4a;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px #b0c4f1;
+    font-weight: 900;
+}
