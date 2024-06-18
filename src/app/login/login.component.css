@@ -1,11 +1,8 @@
-body{
+main{
     background-color: #071c4a;
 }
-.login {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 7%;
+#section-login {
+   margin-left: 35%;
 }
 form{
     height: 200px;
@@ -16,13 +13,24 @@ input{
     border-radius: 5px;
     margin-bottom: 10px;
     height: 35px;
-    
+    width: 300px;
+    margin-left: 8%;
 }
 h2{
     padding: 5%;
     font-family: 'Rubik 80s Fade';
-    color: #071c4a;
+    color: #0051ff;
     font-size: 1.8rem;
-    text-shadow: 1px 1px 3px #b0c4f1;
+    text-shadow: 1px 1px 1px #b0c4f1;
     font-weight: 900;
+    margin-left: 10%;
+}
+button {
+    width: 150px;
+    height: 35px;
+    margin-left: 25%;
+    background-color: #123174e3;
+    border: 1px solid #28407088;
+    font-family: 'Tahoma';
+    font-weight: bold;
 }

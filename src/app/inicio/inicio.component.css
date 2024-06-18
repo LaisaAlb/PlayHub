@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-body {
+main {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -54,7 +54,7 @@ body {
     color: #6b7584;
     font-weight: bold;
     width: 150px;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
     margin-left: 5px;
     font-size: 1.3rem;
     margin-top: -10px;
@@ -63,12 +63,11 @@ body {
     color: #0c2581c8;
     width: 150px;
     font-size: 2.5rem;
-    margin-bottom: 0px;
+    margin-bottom: -1px;
     line-height: 40px;
     font-weight: 800;
 }
 #p3{
-    margin-top: -8px;
     color: #6b7584;
     font-weight: 900;
     margin-bottom: 30%;
@@ -144,94 +143,57 @@ span{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: space-between;
     gap: 20px;
-    
 }
-.jogos h2{
+  
+#mat-cardh2{
     color: #3d77f4;
     font-size: 2rem;
     text-shadow: rgb(169, 188, 227);
     font-family: 'Rubik 80s Fade';
     margin-left: 35%;
-    margin-top: -15%;
+    margin-top: 15%;
     font-weight: 600;
 }
-.card-container {
-    width: calc(33.33% - 20px);
+.example-card {
+    max-width: 350px; 
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease; 
+    background-color: #a2baee;
+  
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    margin-top: 20px;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.card {
-    margin-bottom: 20px; 
-    background-color: #b0c4f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    box-sizing: border-box;
-    margin-left: 5%;
-    padding: 10px;
+.example-card:hover {
+    transform: translateY(-5px); 
+  }
+mat-card-header,
+mat-card-content,
+mat-card-actions {
+    padding: 1rem; 
 }
-.card-title{
-    font-weight: bold;
-    font-size: 1rem;
+mat-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+mat-card-title {
+    font-size: 1.25rem;
+    font-weight: bold; 
+    color: #031846; 
+    font-family: 'Rubik 80s Fade';
+}
+mat-card-content {
+    color: #505051; 
     font-family: 'Tahoma';
 }
-.card-text{
-    color: #6b7584;
-    font-weight: 500;
-}
-@media (max-width: 768px) {
-    .card {
-        width: calc(50% - 20px); /* Largura dos cards em telas menores */
-    }
-}
-footer {
-    text-align: left;
-    background-color: #BED1F5;
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end; 
-    padding: 20px;
-    font-family: 'Rowdies';
-    font-weight: bold;
-    font-size: 1rem;  
-    margin-top: 50px;
-}
-#footer {
-    list-style: none;
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-.li_footer {
-    margin-top: 10px;
-    margin-right: 200px;
-    color: #000000e3;
-}
-#img_footer {
-    width: 50px;
-    margin-bottom: 30px;
-    margin-left: 14%;
-}
-#pfooter{
-    font-family: 'Rubik 80s Fade';
-    color: #123174;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgb(39, 55, 117);
-    font-size: 1.2rem;
-    margin-left: -48%;
-}
-.btn-btn-primary{
-    background-color: #123174;
-    color: #FFF;
-    text-decoration: none;
-    height: 20px;
-    width: 40px;
-    border-radius: 5px;
-    padding: 5px;
-}
+  
+
+
+  
+  
   

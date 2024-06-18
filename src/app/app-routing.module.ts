@@ -5,11 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
-  { path: 'menu', component: MenuComponent},
-  { path: 'login', component: LoginComponent},
-  { path: '', redirectTo: '/menu', pathMatch: 'full'}
+  {path:'inicio', component: InicioComponent},
+  {path:'login', component: LoginComponent},
+  {path:'', redirectTo:'/inicio',pathMatch:'full'}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
