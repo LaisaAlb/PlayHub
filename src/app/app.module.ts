@@ -18,6 +18,11 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { RestritoComponent } from './restrito/restrito.component';
+import { AtualizarProdutoComponent } from './restrito/atualizar-produto/atualizar-produto.component';
+import { CadastroProdutoComponent } from './restrito/cadastro-produto/cadastro-produto.component';
+import { ListaProdutoComponent } from './restrito/lista-produto/lista-produto.component';
+import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { FooterComponent } from './footer/footer.component';
     InicioComponent,
     LoginComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    RestritoComponent,
+    AtualizarProdutoComponent,
+    CadastroProdutoComponent,
+    ListaProdutoComponent,
+    MenuRestritoComponent
   ],
   imports: [
     BrowserModule,
