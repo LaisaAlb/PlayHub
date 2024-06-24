@@ -1,20 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Produto } from '../models/Produto.model';
+import { ProdutoService } from '../produto.service';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
 
-  constructor(private router: Router) {}
+  public produtos: Produto [] = [];
 
-  saibaMais(): void {
-    this.router.navigate(['/sobre']); // Navega para a rota '/sobre'
+  constructor(private _produtoService:ProdutoService){}
+  ngOnInit(): void {
+    this.listarProdutos();
   }
 
-  irParaLogin(): void {
-    // Implemente a navegação para a página de login, se necessário
+  listarProdutos(): void{
+    this._produtoService.getProdutos().subscribe(
+      retornaProduto => {
+        this.produtos = retornaProduto.map(
+          item => {
+            return new Produto(
+              item.id, 
+              item.produto, 
+              item.descricao,
+              item.foto,
+              item.preco
+            ); 
+          }
+        )
+      }
+    )
   }
 }

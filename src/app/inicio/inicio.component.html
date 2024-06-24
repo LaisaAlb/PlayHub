@@ -9,7 +9,7 @@
             <p id="p2"> SEMPRE CONECTADO </p>
             <p id="p3"> com os <span>PlayHub</span></p>
     </div>
-    <button id="convite" (click)="saibaMais()">Saiba Mais</button>
+    <button id="convite">Saiba Mais</button>
     </div>
 </section>
 
@@ -30,26 +30,26 @@
 
   <h2 id="mat-cardh2">Jogos em Promoção</h2>
   <mat-grid-list cols="3">
-      <mat-grid-tile>
+      <mat-grid-tile *ngFor="let produto of produtos">
           <mat-card class="example-card">
-              <img mat-card-image src="../../assets/img/jogo1.jpg" alt="Jogo 1">
+              <img mat-card-image src="../../assets/img/{{produto.foto}}" alt="Jogo 1">
       
               <mat-card-header>
-                <mat-card-title >Bomber Man</mat-card-title>
+                <mat-card-title >{{produto.preco}}</mat-card-title>
               </mat-card-header>
               
               <mat-card-content>
                 <p>
-                  Clássico jogo de labirinto e estratégia
+                  {{produto.descricao}}
                 </p>
               </mat-card-content>
               <mat-card-actions>
-                <p>R$ 100,00</p>
+                <p>{{produto.preco | currency: "BRL"}}</p>
                 <button mat-button>Comprar</button>
               </mat-card-actions>
             </mat-card>
       </mat-grid-tile>
-      <mat-grid-tile>
+     <!-- <mat-grid-tile>
           <mat-card class="example-card">
               <img mat-card-image src="../../assets/img/jogo2.jpg" alt="Jogo 2">
       
@@ -86,6 +86,6 @@
                 <button mat-button>Comprar</button>
               </mat-card-actions>
             </mat-card>
-      </mat-grid-tile>
+      </mat-grid-tile> -->
     </mat-grid-list>
 </main>

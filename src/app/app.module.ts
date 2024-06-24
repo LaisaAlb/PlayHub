@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RestritoRoutingModule } from './restrito/restrito-routing-modele';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './inicio/inicio.component';
@@ -23,6 +24,8 @@ import { AtualizarProdutoComponent } from './restrito/atualizar-produto/atualiza
 import { CadastroProdutoComponent } from './restrito/cadastro-produto/cadastro-produto.component';
 import { ListaProdutoComponent } from './restrito/lista-produto/lista-produto.component';
 import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.co
     AtualizarProdutoComponent,
     CadastroProdutoComponent,
     ListaProdutoComponent,
-    MenuRestritoComponent
+    MenuRestritoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,11 @@ import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.co
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    RestritoRoutingModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
